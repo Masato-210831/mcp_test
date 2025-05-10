@@ -5,6 +5,12 @@ mcp = FastMCP("weather")
 
 
 @mcp.tool()
+async def get_mcp_server_info() -> str:
+    """Get information about the MCP server."""
+    return "streamable-http MCP server is running"
+
+
+@mcp.tool()
 async def get_alerts(prefecture: str) -> str:
     """Get weather alerts for a Japan prefecture.
 
